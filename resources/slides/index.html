@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Talkie.js - Web Components Based Presentation Library</title>
+    <link rel="canonical" href="https://ahomu.github.io/Talkie/" />
+    <link rel="stylesheet" href="./talkie/talkie.css">
+    <link rel="stylesheet" href="./talkie/talkie.theme-default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css">
+    <meta property="og:url" content="https://ahomu.github.io/Talkie/">
+    <meta property="og:site_name" content="Talkie.js - Web Components Based Presentation Library">
+    <meta property="og:author" content="ahomu">
+    <meta name="twitter:url" content="https://ahomu.github.io/Talkie/">
+    <meta name="twitter:site" content="@ahomu">
+    <meta property="og:image" content="https://farm8.staticflickr.com/7469/16209884502_211d01ac0d_z_d.jpg">
+    <meta name="twitter:image" content="https://farm8.staticflickr.com/7469/16209884502_211d01ac0d_z_d.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Talkie.js - Web Components Based Presentation Library">
+    <meta property="og:description" content="Enjoy your presentation & creativity!">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Talkie.js - Web Components Based Presentation Library">
+    <meta name="twitter:description" content="Enjoy your presentation & creativity!">
+    <meta name="description" content="Enjoy your presentation & creativity!">
+</head>
+<body>
+
+<!-- put your slides -->
+
+<tk-slide layout="cover" type="text/x-markdown">
+# Talkie.js
+
+Web Components Based Presentation Library
+
+Go to [repository](https://github.com/ahomu/Talkie)
+</tk-slide>
+
+<tk-slide layout="bullets" type="text/x-markdown">
+## Feature
+
+- Markdown supported
+- Code highlighting
+- Responsive scaling
+- FullScreen mode
+- Vertical Scrolling
+- Progress indicator
+- Accessibility supported
+<!-- - Pointer mode (press `B`)-->
+</tk-slide>
+
+<tk-slide layout="bullets" type="text/x-markdown">
+## 機能 (Japanese)
+
+- Markdown 書けるよ (੭ु˵＞ヮ＜)੭ु⁾⁾
+- ハイライトばっちり _:(°ω° 」∠):＿
+- レスポンシブだよ (^з^)-☆
+- フルスクリーン対応 (｡•̀ᴗ-)✧
+- 縦方向にスクロールできるよ (*´▽`)
+- 進行度インジゲータあるよ c⌒っ.ω.)っ
+- アクセシビリティ配慮してるよ ✧◝(⁰▿⁰)◜✧
+<!-- - ポインターだせるよ (press `B`) ( ꒪◡꒪)-->
+</tk-slide>
+
+<tk-slide layout="code" invert type="text/x-markdown">
+## in HTML
+
+```html
+<tk-slide layout="title">
+    <h1>Section Title</h1>
+    <p>Lorem ipsum dolor sit amet, consect...</p>
+</tk-slide>
+
+<tk-slide layout="bullets">
+    <h2>The bullets</h2>
+    <ul>
+        <li>Foo</li>
+        <li>Bar</li>
+        <li>Baz</li>
+    </ul>
+</tk-slide>
+```
+</tk-slide>
+
+<tk-slide layout="code" invert type="text/x-markdown">
+## in Markdown
+
+```html
+<tk-slide layout="title" type="text/x-markdown">
+# Section Title
+Lorem ipsum dolor sit amet, consect...
+</tk-slide>
+
+<tk-slide layout="bullets" type="text/x-markdown">
+## The bullets
+- Foo
+- Bar
+- Baz
+</tk-slide>
+```
+
+You can use `tk-slide` element instead of `script`.
+</tk-slide>
+
+<tk-slide layout="code" invert type="text/x-markdown">
+## Backface image & filter
+
+```html
+<tk-slide layout
+          backface="background-image.jpg"
+          backface-filter="blur(1px) brightness(.8)">
+
+    <h1>Title</h1>
+    <p>foo, bar, baz, qux...</p>
+
+</tk-slide>
+```
+</tk-slide>
+
+<tk-slide layout="title" invert type="text/x-markdown"
+          backface="https://farm8.staticflickr.com/7469/16209884502_211d01ac0d_z_d.jpg"
+          backface-filter="blur(3px) brightness(.9)">
+## Backface (北極)
+
+`backface-filter="blur(3px) brightness(.9)"`
+</tk-slide>
+
+<tk-slide layout="title" type="text/x-markdown">
+## Vertical Scrolling<br />👇👇👇
+Convenient to quickly browse with mobile devices.
+</tk-slide>
+
+<tk-slide layout="bullets" type="text/x-markdown">
+## FullScreen mode
+
+When you press the **"f"** key will be a full-screen mode. "f" or "Esc" key Press and then exit.
+</tk-slide>
+
+<tk-slide layout="bullets" type="text/x-markdown">
+## Presenter note
+
+Open developer tools, will show presenter notes
+
+-----
+
+Yes! This is your note!
+</tk-slide>
+
+<tk-slide layout="code" invert type="text/x-markdown">
+## Runtime Options
+
+```typescript
+interface TalkieRuntimeOptions {
+  wide?: boolean; // default: false
+  horizontal?: boolean; // default: false
+}
+
+talkie.run(options);
+```
+</tk-slide>
+
+<tk-slide layout="cover" type="text/x-markdown">
+## Enjoy!
+
+[ahomu/Talkie - GitHub.com](https://github.com/ahomu/Talkie)
+</tk-slide>
+
+<tk-pager></tk-pager>
+<tk-progress></tk-progress>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="./talkie/webcomponents-loader.js"></script>
+<script src="./talkie/talkie.js"></script>
+<script>
+window.addEventListener('WebComponentsReady', function(e) {
+    document.body.className += ' webcomponents-ready';
+    talkie.run({wide: false, horizontal: false});
+});
+</script>
+</body>
+</html>
