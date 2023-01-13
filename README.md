@@ -1,5 +1,10 @@
 #### Faculty responsibilities:
 
+| TODO |
+| ---- |
+| - CONTINUE WORKING in lesso-1 <br>  |
+
+
 Add to-do list for branches:
 
 - [ ] very briefly outline where we left off last week
