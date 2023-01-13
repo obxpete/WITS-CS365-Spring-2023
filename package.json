@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "harperdb": "^4.0.0",
     "harperive": "^2.0.1",
     "talkiejs": "^0.12.1"
   }

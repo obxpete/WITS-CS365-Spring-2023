@@ -37,3 +37,10 @@ Which of these is true:
 - [ ] the teacher is awesome
 - [ ] this is the month of Teves
 -
+
+
+### dependencies
+
+- npm install harperdb
+- npm install --global http-server
+- npm install talkiejs
