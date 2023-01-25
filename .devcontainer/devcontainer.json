@@ -18,9 +18,9 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": [
-		"cd /backend/ && npm install",
-		"cd /frontend/ && npm install",
-		"cd /resources/slides/ && npm install -g live-server",
+		"cd /backend/ && npm install  && npm start",
+		"cd /frontend/ && npm install && npm start",
+		"cd /resources/slides/ && npm install -g live-server && live-server"
 	],
 
 	// Configure tool-specific properties.
