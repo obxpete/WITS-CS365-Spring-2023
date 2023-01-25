@@ -1,0 +1,6 @@
+-- SQLite
+CREATE TABLE TASKS (
+  ID INTEGER NOT NULL,
+  taskName TEXT NOT NULL,
+  description TEXT
+)
