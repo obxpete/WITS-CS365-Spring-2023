@@ -17,6 +17,8 @@ import { MatDatepicker } from '@angular/material/datepicker'
 export class AppComponent implements OnInit{
   title = ' My WITS 365 App';
 
+
+
   //paginator viewchild here
   @ViewChild(MatPaginator) paginator: MatPaginator;
 

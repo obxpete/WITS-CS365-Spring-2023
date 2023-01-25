@@ -27,15 +27,30 @@
 
 <!-- put your slides -->
 
-<tk-slide layout="cover" type="text/x-markdown">
-# Talkie.js
+<style>
+.layout-slot::before {
+  font-weight: bold;
+  color: navy;
+  content: "Reference ";
+}
+.layout-slot {
+    background-color:red;
+}
+</style>
+<script>
+    let foo = '<h2>BSD</h2>';
+</script>
+<tk-slide layout="cover" type="text/x-markdown"
+>
+# Welcome
+#### WITS CS365 SPRING 2023
 
-Web Components Based Presentation Library
+#### Lesson 1: hi
 
 Go to [repository](https://github.com/ahomu/Talkie)
 </tk-slide>
 
-<tk-slide layout="bullets" type="text/x-markdown">
+<tk-slide layout="bullets" type="text/x-markdown" backface="background-image.png">
 ## Feature
 
 - Markdown supported
@@ -48,11 +63,10 @@ Go to [repository](https://github.com/ahomu/Talkie)
 <!-- - Pointer mode (press `B`)-->
 </tk-slide>
 
-<tk-slide layout="bullets" type="text/x-markdown">
-## 機能 (Japanese)
+<tk-slide layout="bullets" type="text/x-markdown" backface="background-image.png">
+## שלום 
 
-- Markdown 書けるよ (੭ु˵＞ヮ＜)੭ु⁾⁾
-- ハイライトばっちり _:(°ω° 」∠):＿
+- Markdown 
 - レスポンシブだよ (^з^)-☆
 - フルスクリーン対応 (｡•̀ᴗ-)✧
 - 縦方向にスクロールできるよ (*´▽`)
@@ -61,7 +75,7 @@ Go to [repository](https://github.com/ahomu/Talkie)
 <!-- - ポインターだせるよ (press `B`) ( ꒪◡꒪)-->
 </tk-slide>
 
-<tk-slide layout="code" invert type="text/x-markdown">
+<tk-slide layout="code" invert type="text/x-markdown" backface="background-image.png">
 ## in HTML
 
 ```html
@@ -81,16 +95,16 @@ Go to [repository](https://github.com/ahomu/Talkie)
 ```
 </tk-slide>
 
-<tk-slide layout="code" invert type="text/x-markdown">
+<tk-slide layout="code" invert type="text/x-markdown" backface="background-image.png">
 ## in Markdown
 
 ```html
-<tk-slide layout="title" type="text/x-markdown">
+<tk-slide layout="title" type="text/x-markdown" backface="background-image.png">
 # Section Title
 Lorem ipsum dolor sit amet, consect...
 </tk-slide>
 
-<tk-slide layout="bullets" type="text/x-markdown">
+<tk-slide layout="bullets" type="text/x-markdown" backface="background-image.png">
 ## The bullets
 - Foo
 - Bar
@@ -101,13 +115,12 @@ Lorem ipsum dolor sit amet, consect...
 You can use `tk-slide` element instead of `script`.
 </tk-slide>
 
-<tk-slide layout="code" invert type="text/x-markdown">
+<tk-slide layout="code" invert type="text/x-markdown" backface="background-image.png">
 ## Backface image & filter
 
 ```html
 <tk-slide layout
-          backface="background-image.jpg"
-          backface-filter="blur(1px) brightness(.8)">
+          backface="background-image.png">
 
     <h1>Title</h1>
     <p>foo, bar, baz, qux...</p>
@@ -117,25 +130,25 @@ You can use `tk-slide` element instead of `script`.
 </tk-slide>
 
 <tk-slide layout="title" invert type="text/x-markdown"
-          backface="https://farm8.staticflickr.com/7469/16209884502_211d01ac0d_z_d.jpg"
-          backface-filter="blur(3px) brightness(.9)">
+          backface="background-image.png"
+          >
 ## Backface (北極)
 
 `backface-filter="blur(3px) brightness(.9)"`
 </tk-slide>
 
-<tk-slide layout="title" type="text/x-markdown">
+<tk-slide layout="title" type="text/x-markdown" backface="background-image.png">
 ## Vertical Scrolling<br />👇👇👇
 Convenient to quickly browse with mobile devices.
 </tk-slide>
 
-<tk-slide layout="bullets" type="text/x-markdown">
+<tk-slide layout="bullets" type="text/x-markdown" backface="background-image.png">
 ## FullScreen mode
 
 When you press the **"f"** key will be a full-screen mode. "f" or "Esc" key Press and then exit.
 </tk-slide>
 
-<tk-slide layout="bullets" type="text/x-markdown">
+<tk-slide layout="bullets" type="text/x-markdown" backface="background-image.png">
 ## Presenter note
 
 Open developer tools, will show presenter notes

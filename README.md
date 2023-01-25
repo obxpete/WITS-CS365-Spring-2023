@@ -6,6 +6,7 @@ Add to-do list for branches:
 - [ ] outline the class objectives in the branch readme as an analytic ruberic
 - [ ] include base code
 - [ ] add separate .md file with the steps you took to get from the last branch to this branch's starting point.
+- [ ] add fresh resources/slides/index.html talkie file and run lite-server
 
 #### This Session's Rubric
 
