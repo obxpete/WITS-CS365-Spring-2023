@@ -9,6 +9,10 @@
 ### Me
 
 *   Dad of 4 B''H
+    *   Lombardo's of Silver Spring
+    *   Drabkins of Baltimore
+    *   Gabai's of Kemp Mill Silver Spring
+    *   Lombardos of Ramat Eshkol !
 *   Saba of 5 B''H!
 *   Employee
     *   27 years of this stuff
@@ -39,11 +43,34 @@ This is parnasa class and NOT an HTML class.  
 
 #### _Hands-on_
 
-Soft Skills
+#### Soft Skills
+
+---
+
+### Course 
 
 ---
 
 ## Rubrics
+
+What you should get out of the \_\_\_\_ and yardsticks of success.  (aka Criteria and Performance Levels).
+
+| Criteria | Wiz | Pro | Beinoni | Nebach |
+| --- | --- | --- | --- | --- |
+| eat food | Weekdays and Shabbos | Only Shabbos | vegetarian | ? |
+| learn | parsha, gemara, mishna | parsha and gemara | parsha  | menucha |
+
+---
+
+## Today's rubric
+
+| Knowledge of: | Wiz | Pro | Beinoni | Nebach |
+| --- | --- | --- | --- | --- |
+| Class goals   
+and approach | Weekdays and Shabbos | Only Shabbos | Vegetarian |   |
+| Other Students | parsha, gemara, mishna | parsha and gemara | parsha only | menucha  
+only |
+| Rubrics | can explain it | can make one | can spell it | _can't_ spell it |
 
 ---
 
