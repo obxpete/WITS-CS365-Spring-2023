@@ -22,25 +22,36 @@
     <meta name="twitter:title" content="Talkie.js - Web Components Based Presentation Library">
     <meta name="twitter:description" content="Enjoy your presentation & creativity!">
     <meta name="description" content="Enjoy your presentation & creativity!">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
 <!-- put your slides -->
 
 <style>
+.attribution {
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    padding: 20px;
+    color: rgb(69, 67, 68);
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
 .layout-slot::before {
   font-weight: bold;
   color: navy;
-  content: "Reference ";
+  content: "Reference
+   ";
 }
 .layout-slot {
     background-color:red;
 }
+
 </style>
-<script>
-    let foo = '<h2>BSD</h2>';
-</script>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+<!--  -->
+<div class="attribution">BSD</div>
 <tk-slide layout="cover" type="text/x-markdown" >
 # Welcome
 ### WITS CS365 SPRING 2023
@@ -50,6 +61,7 @@
 Go to [repository](https://github.com/ahomu/Talkie)
 </tk-slide>
 
+<!--  -->
 
 <tk-slide layout="bullets" type="text/x-markdown">
 ## Feature
@@ -63,7 +75,7 @@ Go to [repository](https://github.com/ahomu/Talkie)
 - Accessibility supported
 <!-- - Pointer mode (press `B`)-->
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="bullets" type="text/x-markdown">
@@ -77,33 +89,18 @@ Go to [repository](https://github.com/ahomu/Talkie)
 - アクセシビリティ配慮してるよ ✧◝(⁰▿⁰)◜✧
 <!-- - ポインターだせるよ (press `B`) ( ꒪◡꒪)-->
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="code" invert type="text/x-markdown" >
 ## in HTML
 
 ```html
-<tk-slide layout="title">
-    <h1>Section Title</h1>
-    <p>Lorem ipsum dolor sit amet, consect...</p>
-</tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
-
-
-<tk-slide layout="bullets">
-    <h2>The bullets</h2>
-    <ul>
-        <li>Foo</li>
-        <li>Bar</li>
-        <li>Baz</li>
-    </ul>
-</tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+<div>food</div>
 
 ```
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="code" invert type="text/x-markdown">
@@ -114,7 +111,7 @@ Go to [repository](https://github.com/ahomu/Talkie)
 # Section Title
 Lorem ipsum dolor sit amet, consect...
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="bullets" type="text/x-markdown">
@@ -123,13 +120,13 @@ Lorem ipsum dolor sit amet, consect...
 - Bar
 - Baz
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 ```
 
 You can use `tk-slide` element instead of `script`.
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="code" invert type="text/x-markdown">
@@ -143,11 +140,11 @@ You can use `tk-slide` element instead of `script`.
     <p>foo, bar, baz, qux...</p>
 
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 ```
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="title" type="text/x-markdown">
@@ -156,14 +153,14 @@ You can use `tk-slide` element instead of `script`.
 
 `backface-filter="blur(3px) brightness(.9)"`
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="title" type="text/x-markdown">
 ## Vertical Scrolling<br />👇👇👇
 Convenient to quickly browse with mobile devices.
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="bullets" type="text/x-markdown">
@@ -171,7 +168,7 @@ Convenient to quickly browse with mobile devices.
 
 When you press the **"f"** key will be a full-screen mode. "f" or "Esc" key Press and then exit.
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="bullets" type="text/x-markdown">
@@ -183,7 +180,7 @@ Open developer tools, will show presenter notes
 
 Yes! This is your note!
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="code" invert type="text/x-markdown">
@@ -198,7 +195,7 @@ interface TalkieRuntimeOptions {
 talkie.run(options);
 ```
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-slide layout="cover" type="text/x-markdown">
@@ -206,7 +203,7 @@ talkie.run(options);
 
 [ahomu/Talkie - GitHub.com](https://github.com/ahomu/Talkie)
 </tk-slide>
-<div style="text-align: right"> BSD &nbsp;&nbsp;&nbsp;</div>
+
 
 
 <tk-pager></tk-pager>
@@ -218,7 +215,7 @@ talkie.run(options);
 <script>
 window.addEventListener('WebComponentsReady', function(e) {
     document.body.className += ' webcomponents-ready';
-    talkie.run({wide: false, horizontal: false});
+    talkie.run({wide: false, horizontal: false, canvas: false});
 });
 </script>
 </body>
