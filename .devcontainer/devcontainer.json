@@ -7,7 +7,7 @@
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {},
 		"ghcr.io/warrenbuckley/codespace-features/sqlite:1": {},
-		"ghcr.io/frntn/devcontainers-features/postman:1": {}
+		"ghcr.io/frntn/devcontainers-features/postman:1": {},
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -18,14 +18,33 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": [
+		"echo `export PS1='> '` >> ~/.bashrc",
 		"cd /backend/ && npm install  && npm start",
 		"cd /frontend/ && npm install && npm start",
 		"cd /resources/slides/ && npm install -g live-server && live-server"
 	],
 
 	// Configure tool-specific properties.
-	// "customizations": {},
-
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			//"settings": {},
+			//"devPort": {},
+			// Specify which VS Code extensions to install (List of IDs)
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"bierner.emojisense",
+				"wycliffePepela.Live-Postman",
+				"ms-vsliveshare.vsliveshare",
+				"shd101wyy.markdown-preview-enhanced",
+				"adpyke.vscode-sql-formatter",
+				"alexcvzz.vscode-sqlite",
+				"rangav.vscode-thunder-client",
+				"phu1237.vs-browser",
+				"tonybaloney.vscode-pets",
+				]
+			}
+		},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "root"
 }
