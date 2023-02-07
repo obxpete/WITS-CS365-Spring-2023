@@ -8,6 +8,7 @@
 		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {},
 		"ghcr.io/warrenbuckley/codespace-features/sqlite:1": {},
 		"ghcr.io/frntn/devcontainers-features/postman:1": {},
+		"ghcr.io/devcontainers-contrib/features/bash-command:1": {},
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -19,9 +20,9 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": [
 		"echo `export PS1='> '` >> ~/.bashrc",
-		"cd /backend/ && npm install  && npm start",
-		"cd /frontend/ && npm install && npm start",
-		"cd /resources/slides/ && npm install -g live-server && live-server"
+		"cd /workspaces/WITS-CS365-Spring-2023/backend && npm install",
+		"cd /workspaces/WITS-CS365-Spring-2023/frontend && npm install",
+		// "cd /resources/slides/ && npm install -g live-server && live-server"
 	],
 
 	// Configure tool-specific properties.
