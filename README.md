@@ -3,11 +3,13 @@
 **TODO:**
 
 modify HTML
-- [x] add anchor tag
-- [x] add image
-- [x] add properties
+- add anchor tag
+- add image
+- add properties
 
 **add css**
+
 **add javascript**
+
 **add ajax**
 
