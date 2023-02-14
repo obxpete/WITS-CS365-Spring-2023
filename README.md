@@ -3,12 +3,9 @@
 **TODO:**
 
 modify HTML
-
-[ ] add anchor tag
-
-[ ] add image
-
-[ ] add properties
+- [x] add anchor tag
+- [x] add image
+- [x] add properties
 
 **add css**
 **add javascript**
