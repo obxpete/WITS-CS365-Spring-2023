@@ -9,15 +9,11 @@
 
     <h1>My First Heading</h1>
     
-    <img src="images/witslogo.jpeg" style="float:right" width="100px" alt="wits logo">
+    <!-- <img src="images/witslogo.jpeg" style="float:right" width="100px" alt="wits logo"> -->
 
     <p>My first paragraph.</p>
 
-    <button role="button" onClick="fakeAlert('hi')">click me</button>
-
-    <div id="alert"></div>
-
-    <div id="hebcal-shabbat"></div>
+    <!-- <div id="hebcal-shabbat"></div> -->
 
 </body>
 
@@ -26,9 +22,9 @@
         document.getElementById('alert').innerHTML = '<h5>Hello World </h5>'
     }
 
-    // fetch('https://www.hebcal.com/shabbat?cfg=i2&geonameid=281184&M=on&lg=s&tgt=_top')
-    //     .then(response => response.text())
-    //     .then(data => document.getElementById('hebcal-shabbat').innerHTML = data);
+    fetch('https://www.hebcal.com/shabbat?cfg=i2&geonameid=281184&M=on&lg=s&tgt=_top')
+        .then(response => response.text())
+        .then(data => document.getElementById('hebcal-shabbat').innerHTML = data);
 </script> 
 
 </html>
