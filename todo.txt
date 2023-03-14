@@ -1,0 +1,9 @@
+✅ Software for remembering and managing code changes.
+ 
+Maintains a “directory's” changes as a Repository
+
+Monitor changes with color-coding
+
+Manages changes with Comimits
+
+Allows for Pushing and Pulling Commited changes to remote repositories
