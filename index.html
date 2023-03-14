@@ -2,33 +2,91 @@
 <html>
     <head>
         <title>Title of the document- Appears in Bookmarks and Browser Tabs</title>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style>
+            html,
+body,
+.intro {
+  height: 100%;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+thead th,
+tbody th {
+  color: #fff;
+}
+
+tbody td {
+  font-weight: 500;
+  /* color: rgba(255,255,255,.65); */
+}
+
+.card {
+  border-radius: .5rem;
+}
+        </style>
+        
     </head>
     <body>
 
-        <h1>My First Heading</h1>
+        <h1>CSS and JavaScript Frameworks</h1>
         
-        <!-- <img src="images/witslogo.jpeg" style="float:right" width="100px" alt="wits logo"> -->
-
-        <p>My first paragraph.</p>
+        <h4>API Example</h4>
 
         <!-- <div id="hebcal-shabbat"></div> -->
 
         <!-- Todo: 
-            * Basic HTML Structure
-            * quick review of h1, p
-            * fetch review
-            * go to step 2 branch
+            * Bootstrap for CSS
+            * alpineJS fetch
+            * alpineJS table
         -->
 
+            <table class="table table-dark table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">NAME</th>
+                  <th scope="col">PHONE</th>
+                  <th scope="col">WEB SITE</th>
+                  <th scope="col">EMAIL</th>
+                  <th scope="col">ADDRESS STREET</th>
+                  <th scope="col">COMPANY</th>
+                </tr>
+              </thead>
+              <tbody    
+              x-data="{
+                users:[]
+              }" 
+              x-init="fetch('https://jsonplaceholder.typicode.com/users/').then(response=> { return  response.json(); }).then(data => { users = data;})"
+              >
+
+                <template x-for="user in users">
+                    <tr > 
+                    <td scope="row" x-text="user.name"></td>
+                    <td x-text="user.phone"></td>
+                    <td x-text="user.website"></td>
+                    <td x-text="user.email"></td>
+                    <td  x-text="user.address.street"></td>
+                    <td  x-text="user.company.name"></td>
+                    </tr>
+                </template>
+              </tbody>
+            </table>
+    
+      </div>
     </body>
 
-
-
-    <script defer>
-
-        fetch('https://www.hebcal.com/shabbat?cfg=i2&geonameid=281184&M=on&lg=s&tgt=_top')
-            .then(response => response.text())
-            .then(data => document.getElementById('hebcal-shabbat').innerHTML = data);
-    </script> 
 
 </html>
