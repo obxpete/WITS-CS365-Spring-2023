@@ -1,8 +1,8 @@
 ✅ Software for remembering and managing code changes.
  
-Maintains a folder's changes as a Repository
+✅ Maintains a folder's changes as a Repository
 
-Monitor changes with color-coding
+✅ Monitor changes with color-coding
 
 Manages changes with Comimits
 
