@@ -4,6 +4,6 @@
 
 ✅ Monitor changes with color-coding
 
-Manages changes with Comimits
+✅ Manages changes with Comimits
 
-Allows for Pushing and Pulling Commited changes to remote repositories
+✅ Allows for Pushing and Pulling Commited changes to remote repositories
