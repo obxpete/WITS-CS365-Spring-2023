@@ -66,7 +66,7 @@ export class AppComponent implements OnInit{
   }
 
   getTasks() {
-    this.http.get<[]>('https://obxpete-studious-space-memory-p759xjx455h6566-8090.preview.app.github.dev/api/tasks').subscribe(data => {
+    this.http.get<[]>('https://obxpete-psychic-space-adventure-r75wj7g4pxfx96w-8090.preview.app.github.dev/api/tasks').subscribe(data => {
       this.taskData = data;
       this.ELEMENT_DATA = data['recordset'].map(task => {return {taskID: task.taskID, task: task.task, taskDueDate: task.taskDueDate}})
       this.dataSource = new MatTableDataSource<task>(this.ELEMENT_DATA);
@@ -75,7 +75,7 @@ export class AppComponent implements OnInit{
 
   addNewTask() {
     // this.taskData.push({task:this.taskForm.get('newTask').value});
-    this.http.post<any>('https://obxpete-studious-space-memory-p759xjx455h6566-8090.preview.app.github.dev/api/add', {task:this.taskForm.get('newTask').value, taskDueDate: new Date(this.taskForm.get('newTaskDueDate').value).toDateString() }).subscribe(data => {
+    this.http.post<any>('https://obxpete-psychic-space-adventure-r75wj7g4pxfx96w-8090.preview.app.github.dev/api/add', {task:this.taskForm.get('newTask').value, taskDueDate: new Date(this.taskForm.get('newTaskDueDate').value).toDateString() }).subscribe(data => {
       // insert getTasks() call to update our table
       this.getTasks();
     });
@@ -86,7 +86,7 @@ export class AppComponent implements OnInit{
   // add updateTask function here
   
   updateTask() {
-    this.http.post<any>('https://obxpete-studious-space-memory-p759xjx455h6566-8090.preview.app.github.dev/api/update', {taskID: this.taskUpdateForm.controls['existingTaskID'].value ,  task:this.taskUpdateForm.controls['existingTask'].value, taskDueDate: this.taskUpdateForm.controls['existingTaskDueDate'].value}).subscribe(data => {
+    this.http.post<any>('https://obxpete-psychic-space-adventure-r75wj7g4pxfx96w-8090.preview.app.github.dev/api/update', {taskID: this.taskUpdateForm.controls['existingTaskID'].value ,  task:this.taskUpdateForm.controls['existingTask'].value, taskDueDate: this.taskUpdateForm.controls['existingTaskDueDate'].value}).subscribe(data => {
       // insert getTasks() call to update our table
       this.getTasks();
       this.taskUpdateForm.reset()
@@ -95,7 +95,7 @@ export class AppComponent implements OnInit{
 
   // add delete task function here
   delete(taskID) {
-    this.http.get<[]>(`https://obxpete-studious-space-memory-p759xjx455h6566-8090.preview.app.github.dev/api/delete/${taskID}`).subscribe(data => {
+    this.http.get<[]>(`https://obxpete-psychic-space-adventure-r75wj7g4pxfx96w-8090.preview.app.github.dev/api/delete/${taskID}`).subscribe(data => {
       this.getTasks()
     })  
   }
