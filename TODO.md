@@ -3,9 +3,6 @@ run export PS1='${PWD/*\//} > '
 
 
 steps:
-- npm init -y
-- inspect package.json
-- npm install express
-- app.js
-- node app.js
-- open port to public
+- Web site to display the results 
+- Refactor to use a NodeJS Module 
+
