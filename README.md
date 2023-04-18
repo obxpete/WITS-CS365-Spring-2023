@@ -38,3 +38,6 @@ Which of these is true:
 - [ ] the teacher is awesome
 - [ ] this is the month of Teves
 -
+
+<!-- admin -->
+export PS1='${PWD/*\//} > '
