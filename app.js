@@ -7,4 +7,4 @@ app.get('/', function(request, response) {
 
 var port = process.env.PORT ||  8090;
 app.listen(port);
-console.log('API is running at + http://localhost:' + port + '/api/tasks')
+console.log('API is running at + http://localhost:' + port)
