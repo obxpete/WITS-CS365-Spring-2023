@@ -5,6 +5,6 @@ app.get('/', function(request, response) {
     response.send('Hello from my  app');
 })
 
-app.listen(process.env.port || 3000, function() {
-    console.log('App started');
-});
+var port = process.env.PORT ||  8090;
+app.listen(port);
+console.log('API is running at + http://localhost:' + port + '/api/tasks')
