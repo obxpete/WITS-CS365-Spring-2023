@@ -1,9 +1,8 @@
 
 Move stuff
 
-- [ ] js folder/file
-- [ ] css folder/file
-- [ ] image folder/file 
+- [ ] console.log('hello world')
+- [ ] console.log( document.getElementById('niceChallah').style.display) // first click button
 
 ------
 EXAMPLE CODE:
@@ -14,11 +13,30 @@ EXAMPLE CODE:
 
 ```css
 
+.niceChallahHiddenClass {
+    display:none;
+}
+.niceChallahShowClass {
+    display:inline;
+}
 
 ```
 
 
 ```javascript
 
+function myFunction() {
+    document.getElementById('niceChallah').classList.toggle("niceChallahShowClass","niceChallahHiddenClass");
+}
 
+
+    console.log('hello console!');
+
+    console.table(['item1', 'item2']);
+
+    console.trace();
+    
 ```
+
+
+
