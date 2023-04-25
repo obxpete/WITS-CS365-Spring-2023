@@ -1,37 +1,34 @@
 
-- [x] basic html
-  - [x] What is this thing?
-- [x] basic css
-- [x] basic javascript
-
 Move stuff
 
 - [ ] js folder/file
 - [ ] css folder/file
 - [ ] image folder/file 
 
-
 ------
 EXAMPLE CODE:
 
 ```HTML
-<b>this is bold text</b>
-<image src=""> <!---
-https://houseofnasheats.com/wp-content/uploads/2022/09/Challah-Bread-Recipe-14.jpg
+<image width="200px" src="images/Challah-Bread-Recipe-14.jpg">
 
-width="200px" 
+<button type="button" onclick="myFunction()">Try it</button>
+ 
+<div id="niceChallah">
+      Nice Challah!
+</div>    
 ```
 
 ```css
-style="font-style:italic"
-
-<style>img { border: 5px solid brown;  }</style>
+<link rel="stylesheet" href="css/challah.css">
 
 ```
 
 
 ```javascript
+<script src="javaScript/challah.js"></script>
 
-document.getElementByID('helloDiv')
+function myFunction() {
+    document.getElementById('niceChallah').style.display = "inline";
+}
 
 ```
