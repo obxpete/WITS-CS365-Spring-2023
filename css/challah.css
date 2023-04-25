@@ -1,5 +1,8 @@
 img { border: 5px solid brown;  }
 
-#niceChallah {
+.niceChallahHiddenClass {
     display:none;
+}
+.niceChallahShowClass {
+    display:inline;
 }
