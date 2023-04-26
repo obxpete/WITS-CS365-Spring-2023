@@ -4,7 +4,7 @@ Move stuff
 - [ ] console.log('hello world')
 - [ ] console.log( document.getElementById('niceChallah').style.display) // first click button
 
-------
+------  
 EXAMPLE CODE:
 
 ```HTML
