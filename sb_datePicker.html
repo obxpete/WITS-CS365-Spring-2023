@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="https://alpinejs.dev/build/assets/app.56add47b.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/persist@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/morph@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/mask@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.0-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body >
+    
+    <div
+        x-data="{
+            value: ['2022/01/01', '2022/01/10'],
+            init() {
+                let picker = flatpickr(this.$refs.picker, {
+                    mode: 'range',
+                    dateFormat: 'Y/m/d',
+                    defaultDate: this.value,
+                    onChange: (date, dateString) => {
+                        this.value = dateString.split(' to ')
+                    }
+                })
+    
+                this.$watch('value', () => picker.setDate(this.value))
+            },
+        }"
+        class="max-w-sm w-full"
+    >
+        <div class="mb-2 font-bold">Date Range:</div>
+    
+        <input class="w-full rounded-md border border-gray-200 px-3 py-2.5" x-ref="picker" type="text">
+    </div>
+
+</body>
+
+</html>
