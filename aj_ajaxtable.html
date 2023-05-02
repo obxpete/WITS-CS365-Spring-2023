@@ -1,0 +1,54 @@
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<style>
+      [x-cloak] {
+          display: none !important;
+      }
+  </style>
+  </head>
+  <body style="height:1500px">
+  
+    <div
+    x-cloak
+    x-data="{users: [], 'isLoading': true}"
+    x-init="fetch('https://dummyjson.com/users')
+    .then(response => response.json())
+    .then(response => { users = response.users; isLoading = false; console.log(response.users); })"
+>
+    <h1 x-show="isLoading">Loading...</h1>
+    <table x-show="!isLoading" class="table">
+        <tr>
+            <th>First</th>
+            <th>Last</th>
+            <th>Gender</th>
+            <th>Birthday</th>
+            <th></th>
+        </tr>
+        <template x-for="user in users" :key="user.id">
+            <tr>
+            <td x-text="user.firstName"></td>
+            <td x-text="user.lastName"></td>
+            <td x-text="user.gender" ></td>
+            <td x-text="user.birthDate"></td>
+            <td><img x-bind:src="user.image" width="50px"></td>
+            </tr>
+        </template>
+    </table>
+</div>
+
+
+
+
+</body>
+</html>
