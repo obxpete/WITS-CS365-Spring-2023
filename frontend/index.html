@@ -22,9 +22,17 @@
   <div
   x-cloak
   x-data="{tasks: [], 'isLoading': true}"
-  x-init="fetch('https://obxpete-psychic-space-adventure-r75wj7g4pxfx96w-8090.preview.app.github.dev/api/tasks')
+  x-init="
+  fetch('https://obxpete-psychic-space-adventure-r75wj7g4pxfx96w-8090.preview.app.github.dev/api/tasks', {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'default',
+    credentials: 'include',
+
+
+  })
   .then(response => response.json())
-  .then(response => { tasks = response.recordset; isLoading = false; console.log(response.recordset); })"
+  .then(response => {tasks = response.recordset; isLoading = false; console.log(response.recordset); })"
 >
   <h1 x-show="isLoading">Loading...</h1>
   <table x-show="!isLoading" class="table">
