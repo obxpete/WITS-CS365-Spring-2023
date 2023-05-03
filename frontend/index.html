@@ -1,41 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Alpine Plugins -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+  <!-- Alpine Core -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>    
+
+<style>
+    [x-cloak] {
+        display: none !important;
+    }
+</style>
 </head>
 <body style="height:1500px">
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WITS CIS365</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="aj_ajaxtable.html">Ajax table</a></li>
-      <li><a href="sb_datePicker.html">DatePicker</a></li>
-      <li><a href="http://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art097">DatePicker JS</a></li>
-    </ul>
-  </div>
-</nav>
-  
-<div class="container" style="margin-top:50px">
-  <h3>Fixed Navbar</h3>
-  <div class="row">
-    <div class="col-md-4">
-      <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-    </div>
-  </div>
+  <div
+  x-cloak
+  x-data="{tasks: [], 'isLoading': true}"
+  x-init="fetch('https://obxpete-psychic-space-adventure-r75wj7g4pxfx96w-8090.preview.app.github.dev/api/tasks')
+  .then(response => response.json())
+  .then(response => { tasks = response.recordset; isLoading = false; console.log(response.recordset); })"
+>
+  <h1 x-show="isLoading">Loading...</h1>
+  <table x-show="!isLoading" class="table">
+      <tr>
+          <th>Task</th>
+          <th>Due Date</th>
+      </tr>
+      <template x-for="task in tasks" :key="task.id">
+          <tr>
+          <td x-text="task.task"></td>
+          <td x-text="task.dueDate"></td>
+          </tr>
+      </template>
+  </table>
 </div>
 
-<div class="full-length-page">
 
 
-</div>
+
 </body>
 </html>
