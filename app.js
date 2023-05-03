@@ -7,6 +7,10 @@ app.get('/', function(request, response) {
     response.send({'message':'Hello World!'}); // add helloClass.
 })
 
+app.get('/wits', function(request, response) {
+    response.send({'message':'Hello WITS!!'}); // add helloClass.
+})
+
 var port = process.env.PORT ||  8092;
 app.listen(port);
 console.log('API is running at + http://localhost:' + port)
