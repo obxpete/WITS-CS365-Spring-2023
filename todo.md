@@ -3,6 +3,8 @@ Step 1 - Folder Navigation
 - [ ] ls
 - [ ] clear
 - [ ] mkdir myFolder
+- [ ] cd myFolder
+- [ ] cd ../
 - [ ] touch myfile.txt
 - [ ] rm
 - [ ] rm -r
