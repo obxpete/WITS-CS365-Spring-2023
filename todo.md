@@ -6,4 +6,4 @@ Step 1 - Folder Navigation
 - [ ] touch myfile.txt
 - [ ] rm
 - [ ] rm -r
-- [ ] mv
+- [ ] mv myFolder/myfile.txt myfile.txt
