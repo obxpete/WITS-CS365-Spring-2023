@@ -7,6 +7,11 @@
 **merge**: reunite branches
 
 - [ ] git status
-- [ ] 
 - [ ] git log
+  - [ ] author
+  - [ ] date/time (GMT)
+  - [ ] commit hash - ID of the commit
+  - [ ] commit message 
+- [ ] git add  (touch a new file first)
+- [ ] .gitignore
 
