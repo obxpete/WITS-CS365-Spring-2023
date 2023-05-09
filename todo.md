@@ -13,5 +13,9 @@
   - [ ] commit hash - ID of the commit
   - [ ] commit message 
 - [ ] git add  (touch a new file first)
-- [ ] .gitignore
+- [ ] .gitignore 
+- [ ] git commit -am "this commit used add/message shortcut
+- [ ] git diff
+- [ ] VSCode version control extension
+- [ ] 
 
