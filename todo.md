@@ -1,9 +1,12 @@
-Step 1 - Folder Navigation
-- [ ] pwd
-- [ ] ls
-- [ ] clear
-- [ ] mkdir myFolder
-- [ ] touch myfile.txt
-- [ ] rm
-- [ ] rm -r
-- [ ] mv myFolder/myfile.txt myfile.txt
+**Step 2 - Command-line Git**
+**Git**: a version control software.
+**commits**: "snapshots" 
+**staging**: "ready to be committed"
+**untracked**: not ready to be committed
+**branches**: parallel universe - separate copy - (try things, ...)
+**merge**: reunite branches
+
+- [ ] git status
+- [ ] 
+- [ ] git log
+
